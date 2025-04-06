@@ -79,8 +79,11 @@ function HomePage() {
                       </button>
                       <button
                         onClick={() => {
-                          const updated = data.filter((_, i) => i !== index);
-                          setData(updated);
+                          const confirmDelete = window.confirm("Yakin mau hapus data ini?");
+                          if (confirmDelete) {
+                            const updated = data.filter((_, i) => i !== index);
+                            setData(updated);
+                          }
                         }}
                         className="text-red-600"
                       >
