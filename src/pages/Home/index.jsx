@@ -9,6 +9,7 @@ function HomePage() {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ name: "", price: "" });
   const [editingIndex, setEditingIndex] = useState(null);
+  const [showSidebar, setShowSidebar] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,9 +35,9 @@ function HomePage() {
 
   return (
     <div className="flex h-screen">
-      <SideBar />
+      <SideBar showSidebar={showSidebar} />
       <div className="flex-1 flex flex-col">
-        <Navbar />
+        <Navbar toggleSidebar={() => setShowSidebar(!showSidebar)} />
         <div className="p-6">
           <h2 className="text-2xl font-bold mb-4">Welcome to Home Page</h2>
           <button className="bg-blue-500 text-white px-7 py-1 rounded mb-4" onClick={() => setShowForm(true)}>

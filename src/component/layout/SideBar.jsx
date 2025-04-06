@@ -1,27 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function SideBar() {
+function SideBar({ showSidebar }) {
   return (
-    <div className="w-64 h-screen bg-gray-800 text-white p-5">
-      <h2 className="text-xl font-bold mb-6">Dashboard</h2>
-      <ul>
-        <li className="mb-4">
-          <Link to="/" className="hover:text-gray-400">
-            Home
-          </Link>
-        </li>
-        <li className="mb-4">
-          <Link to="/profile" className="hover:text-gray-400">
-            Profile
-          </Link>
-        </li>
-        <li className="mb-4">
-          <Link to="/settings" className="hover:text-gray-400">
-            Settings
-          </Link>
-        </li>
-      </ul>
+    <div className={`${showSidebar ? "w-64" : "w-0"} transition-all duration-300 overflow-hidden bg-gray-800 text-white`}>
+      <div className="p-5">
+        <h2 className="text-xl font-bold mb-6">Dashboard</h2>
+        <ul>
+          <li className="mb-4">
+            <Link to="/" className="hover:text-gray-400 ">
+              Home
+            </Link>
+          </li>
+          <li className="mb-4">
+            <Link to="/profile" className="hover:text-gray-400">
+              Profile
+            </Link>
+          </li>
+          <li className="mb-4">
+            <Link to="/settings" className="hover:text-gray-400">
+              Settings
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
