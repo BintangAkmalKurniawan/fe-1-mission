@@ -1,13 +1,36 @@
 import React from "react";
 import SideBar from "../../component/layout/SideBar.jsx";
 import Navbar from "../../component/layout/Navbar.jsx";
+import { useState } from "react";
+import Formdata from "./Formdata";
 
-const HomePage = () => {
-  const data = [
-    { id: 1, name: "John Doe", role: "Admin" },
-    { id: 2, name: "Jane Smith", role: "User" },
-    { id: 3, name: "Michael Brown", role: "Moderator" },
-  ];
+function HomePage() {
+  const [data, setData] = useState([]);
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({ name: "", price: "" });
+  const [editingIndex, setEditingIndex] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (editingIndex !== null) {
+      const updated = [...data];
+      updated[editingIndex] = formData;
+      setData(updated);
+      setEditingIndex(null);
+    } else {
+      setData([...data, { ...formData, id: Date.now() }]);
+    }
+
+    setFormData({ name: "", price: "" });
+    setShowForm(false);
+  };
+
+  const handleCancel = () => {
+    setFormData({ name: "", price: "" });
+    setEditingIndex(null);
+    setShowForm(false);
+  };
 
   return (
     <div className="flex h-screen">
@@ -16,28 +39,64 @@ const HomePage = () => {
         <Navbar />
         <div className="p-6">
           <h2 className="text-2xl font-bold mb-4">Welcome to Home Page</h2>
+          <button className="bg-blue-500 text-white px-7 py-1 rounded mb-4" onClick={() => setShowForm(true)}>
+            ADD
+          </button>
+
           <table className="w-full border-collapse border border-gray-300">
             <thead>
               <tr className="bg-gray-200">
                 <th className="border p-2">ID</th>
                 <th className="border p-2">Name</th>
-                <th className="border p-2">Role</th>
+                <th className="border p-2">Price</th>
+                <th className="border p-2">Action</th>
               </tr>
             </thead>
             <tbody>
-              {data.map((user) => (
-                <tr key={user.id} className="border">
-                  <td className="border p-2 text-center">{user.id}</td>
-                  <td className="border p-2 text-center">{user.name}</td>
-                  <td className="border p-2 text-center">{user.role}</td>
+              {data.length === 0 ? (
+                <tr>
+                  <td colSpan="4" className="text-center py-4 text-gray-500">
+                    Belum ada produk
+                  </td>
                 </tr>
-              ))}
+              ) : (
+                data.map((item, index) => (
+                  <tr key={item.id}>
+                    <td className="border p-2 text-center">{item.id}</td>
+                    <td className="border p-2 text-center">{item.name}</td>
+                    <td className="border p-2 text-center">Rp {item.price}</td>
+                    <td className="border p-2 text-center">
+                      <button
+                        onClick={() => {
+                          setEditingIndex(index);
+                          setFormData(item);
+                          setShowForm(true);
+                        }}
+                        className="text-blue-600 mr-2"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => {
+                          const updated = data.filter((_, i) => i !== index);
+                          setData(updated);
+                        }}
+                        className="text-red-600"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
+
+          {showForm && <Formdata formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} editingIndex={editingIndex} onCancel={handleCancel} />}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default HomePage;
