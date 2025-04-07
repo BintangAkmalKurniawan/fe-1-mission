@@ -8,18 +8,18 @@ function SideBar({ showSidebar }) {
         <h2 className="text-xl font-bold mb-6">Dashboard</h2>
         <ul>
           <li className="mb-4">
-            <Link to="/" className="hover:text-gray-400 ">
+            <Link to="/home" className="hover:text-gray-400 ">
               Home
             </Link>
           </li>
           <li className="mb-4">
-            <Link to="/profile" className="hover:text-gray-400">
+            <Link to="/home/profile" className="hover:text-gray-400">
               Profile
             </Link>
           </li>
           <li className="mb-4">
-            <Link to="/settings" className="hover:text-gray-400">
-              Settings
+            <Link to="/home/formdata" className="hover:text-gray-400">
+              Formdata
             </Link>
           </li>
         </ul>
