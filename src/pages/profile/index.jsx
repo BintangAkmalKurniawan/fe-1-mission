@@ -5,7 +5,7 @@ function index() {
     name: "Bitang akmal",
     email: "akmal@example.com",
     role: "Mahasiswa Informatika",
-    avatar: "https://i.pravatar.cc/150?img=5",
+    avatar: "https://i.pravatar.cc/150?img=12",
     bio: "Seorang pemuda dengan semangat tinggi untuk belajar pemrograman dan membangun aplikasi yang berdampak!",
   };
 
