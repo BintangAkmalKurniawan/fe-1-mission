@@ -10,7 +10,7 @@ function HomePage() {
     <div className="flex h-screen">
       <SideBar showSidebar={showSidebar} />
       <div className="flex-1 flex flex-col">
-        <Navbar toggleSidebar={() => setShowSidebar(!showSidebar)} />
+        <Navbar toggleSidebar={() => setShowSidebar(!showSidebar)} className="showSidebar" />
         <div className="p-6">
           <Outlet />
         </div>

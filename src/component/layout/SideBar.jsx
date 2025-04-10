@@ -19,7 +19,7 @@ function SideBar({ showSidebar }) {
           </li>
           <li className="mb-4">
             <Link to="/home/formdata" className="hover:text-gray-400">
-              Formdata
+              Setting
             </Link>
           </li>
         </ul>

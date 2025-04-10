@@ -57,12 +57,14 @@ function Index() {
   return (
     <>
       <div className="flex items-center justify-center min-h-screen bg-white">
-        <div className="absolute top-10 left-10 text-4xl font-bold">LOGO.</div>
+        <div className="absolute top-10 left-10 text-4xl font-bold">GUDANG.</div>
         <div className="w-full max-w-sm p-8 bg-gray-100 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold text-center mb-6">{isLoginPage ? "Login" : "Register"}</h2>
           <form onSubmit={isLoginPage ? handleLogin : handleRegister} className="space-y-3">
+            {isLoginPage ? null : <input type="text" name="name" placeholder="Name" className="w-full p-2 border rounded" value={formData.name} onChange={handleOnChange} />}
             <input type="email" name="email" placeholder="Email" className="w-full p-2 border rounded" value={formData.email} onChange={handleOnChange} />
             <input type="password" name="password" placeholder="Password" className="w-full p-2 border rounded" value={formData.password} onChange={handleOnChange} />
+            {isLoginPage ? null : <input type="password" name="confirmPassword" placeholder="Confirm Password" className="w-full p-2 border rounded" />}
             <button type="submit" className="w-full p-2 text-white bg-teal-400 rounded font-semibold">
               {isLoginPage ? "Login" : "Register"}
             </button>
