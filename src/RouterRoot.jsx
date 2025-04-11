@@ -9,6 +9,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
 
         {/* Semua route yang ada sidebar & navbar-nya */}
         <Route path="/home" element={<HomePage />}>

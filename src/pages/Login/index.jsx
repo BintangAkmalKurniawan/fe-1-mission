@@ -1,89 +1,138 @@
-import React from "react";
+import React, { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { useNavigate } from "react-router";
-import { useState } from "react";
 
-function Index() {
+const Index = () => {
   const navigate = useNavigate();
   const [isLoginPage, setIsLoginPage] = useState(true);
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  const defaultUser = {
-    email: "admin@gmail.com",
-    password: "password",
-  };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const found = existingUsers.find((user) => user.email === formData.email && user.password === formData.password);
-
-    if (found || (formData.email === defaultUser.email && formData.password === defaultUser.password)) {
-      navigate("/home");
-    } else if (found === "" || (formData.email === "" && formData.password === "")) {
-      alert("Email atau password kosong!");
-    } else {
-      alert("Email atau password salah!");
-    }
-  };
-
-  const handleAccountDefault = (e) => {
-    e.preventDefault();
-    setFormData({ email: defaultUser.email, password: defaultUser.password });
-  };
-
-  const handleOnChange = (e) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleRegister = (e) => {
     e.preventDefault();
-
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-    const isEmailUsed = existingUsers.find((user) => user.email === formData.email);
-    if (isEmailUsed) {
-      alert("Email sudah digunakan!");
+    if (formData.password !== formData.confirmPassword) {
+      alert("Password tidak cocok!");
       return;
     }
 
-    const newUsers = [...existingUsers, formData];
-    localStorage.setItem("users", JSON.stringify(newUsers));
-    alert("Register sukses! Silakan login.");
-    setFormData({ email: "", password: "" });
+    const userData = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      password: formData.password,
+    };
+
+    localStorage.setItem("videobelajar-user", JSON.stringify(userData));
+    alert("Registrasi berhasil! Silakan login.");
     setIsLoginPage(true);
   };
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const savedUser = JSON.parse(localStorage.getItem("videobelajar-user"));
+    if (savedUser && savedUser.email === formData.email && savedUser.password === formData.password) {
+      alert("Login berhasil!");
+      navigate("/home");
+    } else {
+      alert("Email atau password salah.");
+    }
+  };
+
   return (
-    <>
-      <div className="flex items-center justify-center min-h-screen bg-white">
-        <div className="absolute top-10 left-10 text-4xl font-bold">GUDANG.</div>
-        <div className="w-full max-w-sm p-8 bg-gray-100 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold text-center mb-6">{isLoginPage ? "Login" : "Register"}</h2>
-          <form onSubmit={isLoginPage ? handleLogin : handleRegister} className="space-y-3">
-            {isLoginPage ? null : <input type="text" name="name" placeholder="Name" className="w-full p-2 border rounded" value={formData.name} onChange={handleOnChange} />}
-            <input type="email" name="email" placeholder="Email" className="w-full p-2 border rounded" value={formData.email} onChange={handleOnChange} />
-            <input type="password" name="password" placeholder="Password" className="w-full p-2 border rounded" value={formData.password} onChange={handleOnChange} />
-            {isLoginPage ? null : <input type="password" name="confirmPassword" placeholder="Confirm Password" className="w-full p-2 border rounded" />}
-            <button type="submit" className="w-full p-2 text-white bg-teal-400 rounded font-semibold">
-              {isLoginPage ? "Login" : "Register"}
+    <div className="bg-[#FFFCEE] min-h-screen">
+      <header className="bg-white shadow-md py-4 px-6">
+        <div className="text-xl font-bold text-orange-500">
+          <span className="text-orange-500">video</span>
+          <span className="text-[#F43F5E]">belajar</span>
+        </div>
+      </header>
+
+      <main className="flex justify-center items-center py-12 px-4 mt-10">
+        <div className="w-full max-w-md bg-white p-8 rounded-md shadow-md">
+          <h2 className="text-center text-2xl font-semibold mb-2">{isLoginPage ? "Masuk Ke Akun" : "Pendaftaran Akun"}</h2>
+          <p className="text-center text-sm text-gray-500 mb-6">{isLoginPage ? "Yuk, lanjutin belajarmu di videobelajar" : "Yuk, daftarkan akunmu sekarang juga!"}</p>
+
+          <form className="space-y-4" onSubmit={isLoginPage ? handleLogin : handleRegister}>
+            {!isLoginPage && (
+              <>
+                <div>
+                  <label className="block text-sm mb-1">
+                    Nama Lengkap <span className="text-red-500">*</span>
+                  </label>
+                  <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full border border-gray-300 rounded-md px-4 py-2" required />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm mb-1">
+                    No. Hp <span className="text-red-500">*</span>
+                  </label>
+                  <PhoneInput country={"id"} value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} inputClass="!w-full !border !border-gray-300 !rounded-md !px-4 !py-2" inputStyle={{ width: "100%" }} />
+                </div>
+              </>
+            )}
+
+            <div>
+              <label className="block text-sm mb-1">
+                E-Mail <span className="text-red-500">*</span>
+              </label>
+              <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full border border-gray-300 rounded-md px-4 py-2" required />
+            </div>
+
+            <div>
+              <label className="block text-sm mb-1">
+                Kata Sandi <span className="text-red-500">*</span>
+              </label>
+              <input type="password" name="password" value={formData.password} onChange={handleChange} className="w-full border border-gray-300 rounded-md px-4 py-2" required />
+            </div>
+
+            {!isLoginPage && (
+              <div>
+                <label className="block text-sm mb-1">
+                  Konfirmasi Kata Sandi <span className="text-red-500">*</span>
+                </label>
+                <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} className="w-full border border-gray-300 rounded-md px-4 py-2" required />
+              </div>
+            )}
+
+            <div className="text-right mt-1">
+              <a href="#" className="text-xs text-gray-500 hover:underline">
+                Lupa Password?
+              </a>
+            </div>
+
+            <button type="submit" className="w-full bg-[#3DDB5A] text-white py-2 rounded-md hover:bg-[#33c14e] font-semibold">
+              {isLoginPage ? "Masuk" : "Daftar"}
+            </button>
+
+            <button type="button" onClick={() => setIsLoginPage(!isLoginPage)} className="w-full bg-[#ECFCE5] text-[#3DDB5A] py-2 rounded-md font-semibold hover:bg-[#daf5d4]">
+              {isLoginPage ? "Daftar" : "Masuk"}
+            </button>
+
+            <div className="flex items-center justify-center">
+              <hr className="flex-grow border-t border-gray-300" />
+              <span className="mx-2 text-sm text-gray-400">atau</span>
+              <hr className="flex-grow border-t border-gray-300" />
+            </div>
+
+            <button type="button" className="w-full flex items-center justify-center border border-gray-300 rounded-md py-2 text-sm hover:bg-gray-100">
+              <img src="https://www.google.com/favicon.ico" className="w-5 h-5 mr-2" alt="Google" />
+              Masuk dengan Google
             </button>
           </form>
-          {!isLoginPage ? null : (
-            <button className="w-full p-2 text-black bg-gray-400 rounded font-semibold mt-2" onClick={handleAccountDefault}>
-              Account Default
-            </button>
-          )}
-          <p className="text-sm mt-4 text-center">
-            {isLoginPage ? "Belum punya akun?" : "Sudah punya akun?"}{" "}
-            <button onClick={() => setIsLoginPage(!isLoginPage)} className="text-blue-500 underline">
-              {isLoginPage ? "Register di sini" : "Login di sini"}
-            </button>
-          </p>
         </div>
-      </div>
-    </>
+      </main>
+    </div>
   );
-}
+};
 
 export default Index;
