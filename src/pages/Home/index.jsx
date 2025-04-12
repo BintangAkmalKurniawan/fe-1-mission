@@ -51,7 +51,7 @@ export default function Beranda() {
 
         <div className="snap-x snap-mandatory overflow-x-scroll">
           <div className="flex gap-5 sm:gap-6 mb-2 text-sm sm:snap-start scroll-ms-6">
-            {["Semua Kelas", "Pemasaran", "Desain", "Pengembangan Diri", "Bisnis"].map((item) => (
+            {["Semua Kelas", "Pemasaran", "Design", "Pengembangan Diri", "Bisnis"].map((item) => (
               <span key={item} className=" px-4  py-1 rounded-full cursor-pointer hover:text-orange-500">
                 {item}
               </span>
