@@ -63,23 +63,29 @@ export default function Beranda() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex flex-row sm:flex-col bg-white rounded-xl  shadow hover:shadow-md overflow-hidden p-3 sm:p-4">
+            <div key={i} className="flex flex-row sm:flex-col bg-white rounded-xl shadow hover:shadow-md overflow-hidden p-3 sm:p-4">
+              {/* Thumbnail */}
               <img src={thumbnails[i % thumbnails.length]} alt="thumbnail" className="w-24 h-24 sm:w-full sm:h-40 object-cover rounded-xl sm:rounded-xl" />
 
+              {/* Konten */}
               <div className="flex flex-col justify-between px-2 sm:p-4 flex-1">
-                <h4 className="text-sm font-semibold leading-snug">Big 4 Auditor Financial Analyst</h4>
+                {/* Konten atas */}
+                <div>
+                  <h4 className="text-sm font-semibold leading-snug">Big 4 Auditor Financial Analyst</h4>
+                  <p className=" hidden sm:block text-xs text-gray-400 mt-1">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik</p>
 
-                <p className="text-xs text-gray-400 mt-1">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik</p>
-
-                <div className="flex items-center gap-2 mt-1">
-                  <img src={avatar} alt="avatar" className="w-6 h-6 rounded-full" />
-                  <div>
-                    <p className="text-xs font-medium">Jenna Ortega</p>
-                    <p className="text-xs text-gray-400 -mt-1">Senior Accountant</p>
+                  {/* Instruktur */}
+                  <div className="flex items-center gap-2 mt-2">
+                    <img src={avatar} alt="avatar" className="w-6 h-6 rounded-full" />
+                    <div>
+                      <p className="text-xs font-medium">Jenna Ortega</p>
+                      <p className="text-xs text-gray-400 -mt-1">Senior Accountant</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between mt-2">
+                {/* Bintang & Harga (di bawah konten) */}
+                <div className="flex items-center justify-between mt-4">
                   <div className="flex items-center gap-2 text-yellow-400 text-sm">
                     <span>★ ★ ★ ☆ ☆</span>
                     <span className="text-gray-500 text-sm">3.5</span>
