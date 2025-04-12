@@ -29,7 +29,7 @@ export default function Beranda() {
       </header>
 
       {/* Banner */}
-      <section className="relative  h-[320px] sm:h-[500px] flex items-center justify-center text-center text-white px-4 mt-16 sm:my-10 mx-10 sm:mx-64 rounded shadow-md ">
+      <section className="relative  h-[420px] sm:h-[500px] flex items-center justify-center text-center text-white px-4 mt-16 sm:my-10 mx-10 sm:mx-64 rounded shadow-md ">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${poster})` }}>
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
@@ -50,8 +50,8 @@ export default function Beranda() {
         {/* Kategori */}
 
         <div className="snap-x snap-mandatory overflow-x-scroll">
-          <div className="flex gap-4 sm:gap-6 mb-2 text-sm sm:snap-start scroll-ms-6">
-            {["Digital Teknologi", "Pemasaran", "Desain", "Pengembangan Diri", "Baru"].map((item) => (
+          <div className="flex gap-5 sm:gap-6 mb-2 text-sm sm:snap-start scroll-ms-6">
+            {["Semua Kelas", "Pemasaran", "Desain", "Pengembangan Diri", "Bisnis"].map((item) => (
               <span key={item} className=" px-4  py-1 rounded-full cursor-pointer hover:text-orange-500">
                 {item}
               </span>
@@ -63,36 +63,39 @@ export default function Beranda() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex flex-row sm:flex-col bg-white rounded-xl shadow hover:shadow-md overflow-hidden p-3 sm:p-4">
+            <div className="grid grid-rows-1 bg-white rounded-xl shadow hover:shadow-md overflow-hidden p-3 sm:p-3 mt-4">
               {/* Thumbnail */}
-              <img src={thumbnails[i % thumbnails.length]} alt="thumbnail" className="w-24 h-24 sm:w-full sm:h-40 object-cover rounded-xl sm:rounded-xl" />
+              <div className="grid grid-cols-2 sm:grid-cols-1 gap-x-1 items-start ">
+                {/* Thumbnail */}
+                <img src={thumbnails[i % thumbnails.length]} alt="thumbnail" className="w-24 h-24 sm:w-full sm:h-40 object-cover rounded-xl sm:rounded-xl col-span-1 col-start-1 " />
 
-              {/* Konten */}
-              <div className="flex flex-col justify-between px-2 sm:p-4 flex-1">
-                {/* Konten atas */}
-                <div>
-                  <h4 className="text-sm font-semibold leading-snug">Big 4 Auditor Financial Analyst</h4>
-                  <p className=" hidden sm:block text-xs text-gray-400 mt-1">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik</p>
+                {/* Konten */}
+                <div className="flex flex-col gap-1 pl-2 sm:px-3 sm:py-2 flex-1 col-span-1 -mx-[60px] sm:mx-0">
+                  {/* Konten atas */}
+                  <div>
+                    <h4 className="text-sm font-semibold ">Big 4 Auditor Financial Analyst</h4>
+                    <p className="hidden sm:block text-xs text-gray-400 mt-1">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik</p>
 
-                  {/* Instruktur */}
-                  <div className="flex items-center gap-2 mt-2">
-                    <img src={avatar} alt="avatar" className="w-6 h-6 rounded-full" />
-                    <div>
-                      <p className="text-xs font-medium">Jenna Ortega</p>
-                      <p className="text-xs text-gray-400 -mt-1">Senior Accountant</p>
+                    {/* Instruktur */}
+                    <div className="flex items-center mt-1 gap-2">
+                      <img src={avatar} alt="avatar" className="w-6 h-6 rounded-full" />
+                      <div>
+                        <p className="text-xs font-medium">Jenna Ortega</p>
+                        <p className="text-xs text-gray-400 mt-0">Senior Accountant</p>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Bintang & Harga (di bawah konten) */}
-                <div className="flex items-center justify-between mt-4">
-                  <div className="flex items-center gap-2 text-yellow-400 text-sm">
-                    <span>★ ★ ★ ☆ ☆</span>
-                    <span className="text-gray-500 text-sm">3.5</span>
-                    <span className="text-gray-400 text-xs">(86)</span>
-                  </div>
-                  <span className="text-green-600 font-bold text-sm">Rp 300K</span>
+              {/* Bintang & Harga (di bawah konten) */}
+              <div className="flex items-center justify-between mt-4">
+                <div className="flex items-center gap-2 text-yellow-400 text-sm">
+                  <span>★ ★ ★ ☆ ☆</span>
+                  <span className="text-gray-500 text-sm">3.5</span>
+                  <span className="text-gray-400 text-xs">(86)</span>
                 </div>
+                <span className="text-green-600 font-bold text-sm">Rp 300K</span>
               </div>
             </div>
           ))}
