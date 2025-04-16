@@ -20,8 +20,8 @@ export default function Beranda() {
     setShowSidebar(!showSidebar);
   };
 
-  const sideActive = showSidebar ? "h-64" : "h-20";
-  const menuActive = showSidebar ? "block" : "hidden";
+  const sideActive = showSidebar ? "h-64 flex" : "h-20";
+  const menuActive = showSidebar ? "block sm:inline" : "hidden";
 
   return (
     <div className="background-color min-h-screen ">
@@ -106,7 +106,7 @@ export default function Beranda() {
                 <div className="flex flex-col gap-1 pl-2 sm:px-3 sm:py-2 flex-1 col-span-1 -mx-[60px] sm:mx-0">
                   {/* Konten atas */}
                   <div>
-                    <h4 className="text-sm font-semibold ">Big 4 Auditor Financial Analyst</h4>
+                    <h4 className="text-sm font-semibold max-w-[200px]">Big 4 Auditor Financial Analyst</h4>
                     <p className="hidden sm:block text-xs text-gray-400 mt-1">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik</p>
                     {/* Instruktur */}
                     <div className="flex items-center mt-1 gap-2">
