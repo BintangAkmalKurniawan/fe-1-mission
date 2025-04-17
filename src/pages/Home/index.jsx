@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import poster from "../../assets/thumbnail/poster.jpeg";
 import satu from "../../assets/thumbnail/satu.jpeg";
 import dua from "../../assets/thumbnail/dua.jpeg";
@@ -10,62 +10,18 @@ import tujuh from "../../assets/thumbnail/tujuh.jpeg";
 import delapan from "../../assets/thumbnail/delapan.jpeg";
 import sembilan from "../../assets/thumbnail/sembilan.jpeg";
 import avatar from "../../assets/avatar/satu.png";
+import Navbar from "../../component/layout/Navbar.jsx";
 
 export default function Beranda() {
   const thumbnails = [satu, dua, tiga, empat, lima, enam, tujuh, delapan, sembilan];
   const navbar = ["Semua Kelas", "Pemasaran", "Design", "Pengembangan Diri", "Bisnis"];
-  const [showSidebar, setShowSidebar] = useState(false);
-
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar);
-  };
-
-  const sideActive = showSidebar ? "h-64 flex" : "h-20";
-  const menuActive = showSidebar ? "block sm:inline" : "hidden";
 
   return (
     <div className="background-color min-h-screen ">
       {/* Header */}
-      <header className={`bg-white shadow-sm px-4 sm:px-20 flex justify-between sm:items-center ${sideActive} transition duration-300`}>
-        <h1 className="text-orange-500 text-xl font-bold pt-4 sm:pt-0">videobelajar</h1>
-        <div className="flex sm:items-center pt-4 sm:pt-0 space-x-4 overflow-hidden sm:overflow-visible">
-          <span className="text-sm text-gray-600 hidden sm:inline">Bintang Akmal Kurniawan</span>
-          <img src={avatar} alt="User" className="w-8 h-8 rounded-full hidden sm:inline" />
-          <svg onClick={toggleSidebar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 sm:hidden ">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-          </svg>
-          <ul className={` ${menuActive} fixed top-[40px] flex-col left-20 transform -translate-x-1/2 space-y-1 text-sm text-gray-600 flex flex-col p-4 gap-4`}>
-            <li>
-              <button href="#" className="border-b-2 border-grey-400 ">
-                Kategori
-              </button>
-            </li>
-            <li>
-              <button href="#" className="border-b-2 border-grey-400 ">
-                Profile Saya
-              </button>
-            </li>
-            <li>
-              <button href="#" className="border-b-2 border-grey-400 ">
-                Kalas Saya
-              </button>
-            </li>
-            <li>
-              <button href="#" className="border-b-2 border-grey-400 ">
-                Pesanan Saya
-              </button>
-            </li>
-            <li>
-              <a href="#" className="border-b-2 border-grey-400 ">
-                Keluar
-              </a>
-            </li>
-          </ul>
-        </div>
-      </header>
-
+      <Navbar />
       {/* Banner */}
-      <section className="relative  h-[420px] sm:h-[500px] flex items-center justify-center text-center text-white px-4 mt-16 sm:my-10 mx-10 sm:mx-64 rounded shadow-md ">
+      <section className="relative  h-[420px] sm:h-[500px] flex items-center justify-center text-center text-white px-4 mt-[100px] sm:my-10 mx-10 sm:mx-64 rounded shadow-md ">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${poster})` }}>
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
@@ -88,9 +44,7 @@ export default function Beranda() {
         <div className="snap-x snap-mandatory overflow-x-scroll">
           <div className="flex gap-5 sm:gap-6 mb-2 text-sm sm:snap-start scroll-ms-6">
             {navbar.map((item) => (
-              <span key={item} className=" px-4  py-1 rounded-full cursor-pointer hover:text-orange-500">
-                {item}
-              </span>
+              <span className=" px-4 py-1 rounded-full cursor-pointer hover:text-orange-500 ">{item}</span>
             ))}
           </div>
         </div>
@@ -100,13 +54,12 @@ export default function Beranda() {
             <div className="grid grid-rows-1 bg-white rounded-xl shadow hover:shadow-md overflow-hidden p-3 sm:p-3 mt-4">
               {/* Thumbnail */}
               <div className="grid grid-cols-2 sm:grid-cols-1 gap-x-1 items-start">
-                {/* Thumbnail */}
                 <img src={thumbnails[i % thumbnails.length]} alt="thumbnail" className="w-24 h-24 sm:w-full sm:h-40 object-cover rounded-xl sm:rounded-xl col-span-1 col-start-1 " />
                 {/* Konten */}
-                <div className="flex flex-col gap-1 pl-2 sm:px-3 sm:py-2 flex-1 col-span-1 -mx-[60px] sm:mx-0">
+                <div className="grid grid-col gap-1 pl-2 sm:px-3 sm:py-2 flex-1 col-span-1 -mx-[60px] sm:mx-0">
                   {/* Konten atas */}
                   <div>
-                    <h4 className="text-sm font-semibold max-w-[200px]">Big 4 Auditor Financial Analyst</h4>
+                    <h4 className="text-sm font-semibold max-w-[200px] sm:max-w-full ml-[7px]">Big 4 Auditor Financial Analyst</h4>
                     <p className="hidden sm:block text-xs text-gray-400 mt-1">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik</p>
                     {/* Instruktur */}
                     <div className="flex items-center mt-1 gap-2">

@@ -1,19 +1,63 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { useState } from "react";
+import avatar from "../../assets/avatar/satu.png";
 
-function Navbar({ toggleSidebar }) {
-  const navigate = useNavigate();
+function Navbar() {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
+  const toggleSidebar2 = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  const sideActive = showSidebar ? "flex" : "block";
+  const menuActive = showSidebar ? "block sm:inline " : "hidden";
 
   return (
-    <div className="w-full bg-teal-500 p-4 text-white flex justify-between">
-      <button onClick={toggleSidebar} className="bg-white text-black px-3 py-1 rounded">
-        ☰ Menu
-      </button>
-      <h1 className="text-lg font-bold">LOGO</h1>
-      <button className="bg-red-500 px-4 py-1 rounded" onClick={() => navigate("/")}>
-        Logout
-      </button>
-    </div>
+    <header className={`fixed top-0 left-0 right-0 z-50 sm:z-50 bg-white shadow-sm px-4 sm:px-20 flex justify-between sm:items-center ${sideActive} transition duration-300 h-20`}>
+      <h1 className="text-orange-500 text-xl font-bold pt-4 sm:pt-0">videobelajar</h1>
+      <div className="flex sm:items-center pt-4 sm:pt-0 space-x-4 overflow-hidden sm:overflow-visible">
+        <button>
+          <span className="text-sm text-gray-600 hidden sm:inline" onClick={toggleSidebar2}>
+            Kategori
+          </span>
+        </button>
+        <img src={avatar} alt="User" className="w-8 h-8 rounded-full hidden sm:inline" />
+        <svg onClick={toggleSidebar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 sm:hidden ">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+        <ul
+          className={` ${menuActive} fixed top-[40px] flex-col top-20 left-[47%] sm:left-[90%] right-0 w-full sm:w-56 bg-white border border-gray-200 rounded divide-y divide-gray-100 shadow transform -translate-x-1/2 space-y-1 text-sm text-gray-600 flex flex-col p-4 gap-4 z-50 sm:z-50`}
+        >
+          <li>
+            <button href="#" className="pt-4 sm:pt-0 block sm:hidden ">
+              Kategori
+            </button>
+          </li>
+          <li>
+            <button href="#" className="pt-4">
+              Profile Saya
+            </button>
+          </li>
+          <li>
+            <button href="#" className="pt-4 ">
+              Kalas Saya
+            </button>
+          </li>
+          <li>
+            <button href="#" className="pt-4 ">
+              Pesanan Saya
+            </button>
+          </li>
+          <li>
+            <button href="#" className="pt-4 text-red-500">
+              Keluar<i className="ml-4 ri-logout-box-r-line"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
   );
 }
 

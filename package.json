@@ -15,6 +15,7 @@
     "react-phone-input-2": "^2.15.1",
     "react-router": "^7.4.1",
     "react-router-dom": "^7.5.0",
+    "remixicon": "^4.6.0",
     "router": "^2.2.0"
   },
   "devDependencies": {
