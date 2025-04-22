@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import HomePage from "./pages/Home";
 import Profile from "./pages/profile";
 import Home from "./pages/Home";
+import Kategori from "./pages/Kategori";
 
 function Router() {
   return (
@@ -11,11 +11,7 @@ function Router() {
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
 
-        {/* Semua route yang ada sidebar & navbar-nya */}
-        <Route path="/home" element={<HomePage />}>
-          <Route index element={<Home />} />
-          <Route path="profile" element={<Profile />} />
-        </Route>
+        <Route path="/kategori" element={<Kategori />} />
       </Routes>
     </BrowserRouter>
   );

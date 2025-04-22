@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import avatar from "../../assets/avatar/satu.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -28,16 +29,16 @@ function Navbar() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
         <ul
-          className={` ${menuActive} fixed top-[40px] flex-col top-20 left-[47%] sm:left-[90%] right-0 w-full sm:w-56 bg-white border border-gray-200 rounded divide-y divide-gray-100 shadow transform -translate-x-1/2 space-y-1 text-sm text-gray-600 flex flex-col p-4 gap-4 z-50 sm:z-50`}
+          className={` ${menuActive} fixed top-[60px] flex-col top-30 left-[47%] sm:left-[90%] right-0 w-full sm:w-56 bg-white border border-gray-200 rounded divide-y divide-gray-100 shadow transform -translate-x-1/2 space-y-1 text-sm text-gray-600 flex flex-col p-4 gap-4 z-50 sm:z-50`}
         >
           <li>
-            <button href="#" className="pt-4 sm:pt-0 block sm:hidden ">
+            <NavLink to={"/kategori"} className="pt-4 sm:pt-0 block ">
               Kategori
-            </button>
+            </NavLink>
           </li>
           <li>
-            <button href="#" className="pt-4">
-              Profile Saya
+            <button href="#" className="pt-4 ">
+              Profile
             </button>
           </li>
           <li>

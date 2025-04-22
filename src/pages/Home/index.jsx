@@ -11,6 +11,7 @@ import delapan from "../../assets/thumbnail/delapan.jpeg";
 import sembilan from "../../assets/thumbnail/sembilan.jpeg";
 import avatar from "../../assets/avatar/satu.png";
 import Navbar from "../../component/layout/Navbar.jsx";
+import Footer from "../../component/layout/Footer.jsx";
 
 export default function Beranda() {
   const thumbnails = [satu, dua, tiga, empat, lima, enam, tujuh, delapan, sembilan];
@@ -21,12 +22,12 @@ export default function Beranda() {
       {/* Header */}
       <Navbar />
       {/* Banner */}
-      <section className="relative  h-[420px] sm:h-[500px] flex items-center justify-center text-center text-white px-4 mt-[100px] sm:my-10 mx-10 sm:mx-64 rounded shadow-md ">
+      <section className="relative top-[60px] h-[420px] sm:h-[400px] flex items-center justify-center text-center text-white px-4 mt-[100px] sm:my-10 mx-10 sm:mx-64 rounded shadow-md ">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${poster})` }}>
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
 
-        <div className="relative z-10 max-w-3xl">
+        <div className="relative z-10 max-w-3xl ">
           <h2 className="text-2xl sm:banner font-bold leading-tight">Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!</h2>
           <p className="mt-4 text-sm sm:text-base">
             Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.{" "}
@@ -36,7 +37,7 @@ export default function Beranda() {
       </section>
 
       {/* Koleksi Video */}
-      <section className="px-4 py-8 sm:py-3 mx-10 sm:mx-64 ">
+      <section className="px-4 py-8 sm:py-3 mx-10 sm:mx-64 my-10 sm:my-20">
         <h3 className="text-xl font-semibold mb-4">Koleksi Video Pembelajaran Unggulan</h3>
 
         {/* Kategori */}
@@ -107,87 +108,7 @@ export default function Beranda() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white text-gray-700 border-t">
-        <div className="max-w-7xl mx-auto px-6 py-10">
-          {/* Atas - Logo & Deskripsi */}
-          <div className="mb-6">
-            <h2 className="text-xl font-bold">
-              <span className="text-yellow-500">video</span>
-              <span className="text-red-500">belajar</span>
-            </h2>
-            <p className="mt-2 font-medium">Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</p>
-            <p className="mt-2 text-sm">Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
-            <p className="text-sm">+62-877-7123-1234</p>
-          </div>
-
-          {/* Menu responsive */}
-          <div className="block sm:hidden border-t border-gray-200 pt-4">
-            {["Perusahaan", "Perusahaan", "Komunitas"].map((item, idx) => (
-              <details key={idx} className="mb-2">
-                <summary className="font-semibold cursor-pointer py-1 flex justify-between items-center">
-                  {item}
-                  <span className="ml-2">›</span>
-                </summary>
-              </details>
-            ))}
-          </div>
-
-          {/* Menu desktop */}
-          <div className="hidden sm:grid grid-cols-3 gap-10">
-            {/* Kategori */}
-            <div>
-              <h4 className="font-semibold mb-2">Kategori</h4>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>Digital & Teknologi</li>
-                <li>Pemasaran</li>
-                <li>Manajemen Bisnis</li>
-                <li>Pengembangan Diri</li>
-                <li>Desain</li>
-              </ul>
-            </div>
-
-            {/* Perusahaan */}
-            <div>
-              <h4 className="font-semibold mb-2">Perusahaan</h4>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>Tentang Kami</li>
-                <li>FAQ</li>
-                <li>Kebijakan Privasi</li>
-                <li>Ketentuan Layanan</li>
-                <li>Bantuan</li>
-              </ul>
-            </div>
-
-            {/* Komunitas */}
-            <div>
-              <h4 className="font-semibold mb-2">Komunitas</h4>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>Tips Sukses</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Footer bawah */}
-          <div className="border-t mt-8 pt-6 pb-8 flex flex-col items-start lg:flex-row lg:justify-between lg:items-center">
-            <div className="flex gap-4 mb-4 lg:mb-0">
-              <a href="#" className="text-gray-600 hover:text-black">
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="#" className="text-gray-600 hover:text-black">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="text-gray-600 hover:text-black">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="text-gray-600 hover:text-black">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </div>
-            <p className="text-sm text-gray-500">@2023 Gerobak Sayur All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
