@@ -1,44 +1,10 @@
 import { React, useState } from "react";
-import { FaFilter, FaSort, FaSearch, FaClock, FaTags, FaBook } from "react-icons/fa";
+import { FaSort, FaSearch, FaClock, FaTags, FaBook } from "react-icons/fa";
 import Navbar from "../../component/layout/Navbar";
 import satu from "../../assets/thumbnail/satu.jpeg";
 import dua from "../../assets/thumbnail/dua.jpeg";
 import tiga from "../../assets/thumbnail/tiga.jpeg";
-import avatar from "../../assets/avatar/satu.png";
-
-const Card = ({ title, instructor, price, rating, image }) => {
-  const [name, role] = instructor.split("\n");
-
-  return (
-    <div className="flex flex-col items-start gap-3 bg-white p-3 rounded-lg shadow-sm">
-      <div className="flex gap-3">
-        <img src={image} alt="thumbnail" className="w-24 h-24 rounded-md object-cover" />
-        <div className="flex-1">
-          <h3 className="font-semibold text-sm text-gray-900 leading-tight">{title}</h3>
-          <div className="flex items-center mt-1 gap-2">
-            <img src={avatar} alt="avatar" className="w-6 h-6 rounded-full" />
-            <div>
-              <p className="text-xs font-medium">{name}</p>
-              <p className="text-xs text-gray-400 mt-0">{role}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex items-center justify-between gap-[140px]">
-        <div className="flex items-center gap-1 text-xs text-yellow-400 mt-1">
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>{rating}</span>
-        </div>
-        <div className="text-green-600 font-semibold text-sm ">{price}</div>
-      </div>
-    </div>
-  );
-};
+import Card from "../Kategori/component/Card.jsx";
 
 function Index() {
   const filterIcons = {
@@ -158,11 +124,13 @@ function Index() {
         </div>
       </div>
       {/* Course Cards */}
-      <div className="space-y-3">
-        {courses.map((course, i) => (
-          <Card key={i} {...course} />
-        ))}
-      </div>
+      <section className=" sm:py-3 mx-5 sm:mx-64 my-10 sm:my-20">
+        <div className="space-y-3">
+          {courses.map((course, i) => (
+            <Card key={i} {...course} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
