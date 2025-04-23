@@ -29,7 +29,7 @@ function Navbar() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
         <ul
-          className={` ${menuActive} fixed top-[60px] flex-col top-30 left-[47%] sm:left-[90%] right-0 w-full sm:w-56 bg-white border border-gray-200 rounded divide-y divide-gray-100 shadow transform -translate-x-1/2 space-y-1 text-sm text-gray-600 flex flex-col p-4 gap-4 z-50 sm:z-50`}
+          className={` ${menuActive} fixed top-[80px] flex-col top-30 left-[47%] sm:left-[90%] right-0 w-full sm:w-56 bg-white border border-gray-200 rounded divide-y divide-gray-100 shadow transform -translate-x-1/2 space-y-1 text-sm text-gray-600 flex flex-col p-4 gap-4 z-50 sm:z-50`}
         >
           <li>
             <NavLink to={"/kategori"} className="pt-4 sm:pt-0 block ">
