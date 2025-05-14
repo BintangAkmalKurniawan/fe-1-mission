@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Card = ({ title, instructor, price, rating, image }) => {
   const [name, role] = instructor.split("\n");
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("detail");
+  };
 
   return (
-    <div className="flex flex-col md:flex-col bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition">
+    <div className="flex flex-col md:flex-col bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition" onClick={handleClick()}>
       <div className="flex flex-row md:flex-col gap-3">
         <img src={image} alt="thumbnail" className="w-24 h-24 md:w-full md:h-40 rounded-md object-cover" />
         <div className="flex-1">

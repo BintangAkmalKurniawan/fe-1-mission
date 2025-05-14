@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import Profile from "./pages/profile";
 import Home from "./pages/Home";
+import Detail from "./pages/Detail/Index";
 import Kategori from "./pages/Kategori";
 
 function Router() {
@@ -9,8 +9,9 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-
+        <Route path="/home" element={<Home />}>
+          <Route path="detail" element={<Detail />} />
+        </Route>
         <Route path="/kategori" element={<Kategori />} />
       </Routes>
     </BrowserRouter>
