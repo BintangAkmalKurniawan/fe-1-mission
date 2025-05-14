@@ -1,58 +1,8 @@
 import React from "react";
-import Navbar from "../../component/layout/Navbar.jsx";
-import Footer from "../../component/layout/Footer.jsx";
-import satu from "../../assets/thumbnail/satu.jpeg";
-import dua from "../../assets/thumbnail/dua.jpeg";
-import tiga from "../../assets/thumbnail/tiga.jpeg";
-import Filter from "./component/Filter.jsx";
 import Card from "./component/Card.jsx";
+import { courses } from "../../data.js";
 
 export default function Beranda() {
-  const courses = [
-    {
-      title: "Big 4 Auditor Financial Analyst",
-      instructor: "Jenna Ortega\nSenior Accountant",
-      price: "Rp 300K",
-      rating: "3.5 (68)",
-      image: satu,
-    },
-    {
-      title: "Big 4 Auditor Financial Analyst",
-      instructor: "Jenna Ortega\nSenior Accountant",
-      price: "Rp 300K",
-      rating: "3.5 (68)",
-      image: dua,
-    },
-    {
-      title: "Big 4 Auditor Financial Analyst",
-      instructor: "Jenna Ortega\nSenior Accountant",
-      price: "Rp 300K",
-      rating: "3.5 (68)",
-      image: tiga,
-    },
-    {
-      title: "Big 4 Auditor Financial Analyst",
-      instructor: "Jenna Ortega\nSenior Accountant",
-      price: "Rp 300K",
-      rating: "3.5 (68)",
-      image: satu,
-    },
-    {
-      title: "Big 4 Auditor Financial Analyst",
-      instructor: "Jenna Ortega\nSenior Accountant",
-      price: "Rp 300K",
-      rating: "3.5 (68)",
-      image: dua,
-    },
-    {
-      title: "Big 4 Auditor Financial Analyst",
-      instructor: "Jenna Ortega\nSenior Accountant",
-      price: "Rp 300K",
-      rating: "3.5 (68)",
-      image: tiga,
-    },
-  ];
-
   return (
     <div className="background-color min-h-screen ">
       <Navbar />
@@ -66,8 +16,8 @@ export default function Beranda() {
 
         <div className="w-full lg:w-[80%]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {courses.map((course, index) => (
-              <Card key={index} {...course} />
+            {courses.map((course) => (
+              <Card key={course.id} course={course} />
             ))}
           </div>
         </div>

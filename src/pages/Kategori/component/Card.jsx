@@ -1,14 +1,27 @@
-import React from "react";
+import { useNavigate } from "react-router";
 
-const Card = ({ title, instructor, price, rating, image }) => {
-  const [name, role] = instructor.split("\n");
+const Card = ({ course }) => {
+  const [name, role] = course.instructor.split("\n");
+  const navigate = useNavigate();
 
+  const handleClickCard = () => {
+    navigate("/detail", {
+      state: {
+        title: course.title,
+        instructor: course.instructor,
+        price: course.price,
+        rating: course.rating,
+        image: course.image,
+        description: course.description,
+      },
+    });
+  };
   return (
-    <div className="flex flex-col md:flex-col bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition">
+    <div className="flex flex-col md:flex-col bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer" onClick={handleClickCard}>
       <div className="flex flex-row md:flex-col gap-3">
-        <img src={image} alt="thumbnail" className="w-24 h-24 md:w-full md:h-40 rounded-md object-cover" />
+        <img src={course.image} alt="thumbnail" className="w-24 h-24 md:w-full md:h-40 rounded-md object-cover" />
         <div className="flex-1">
-          <h3 className="font-semibold text-sm text-gray-900 leading-tight">{title}</h3>
+          <h3 className="font-semibold text-sm text-gray-900 leading-tight">{course.title}</h3>
           <div className="flex items-center mt-1 gap-2">
             <img src="/avatar/satu.png" alt="avatar" className="w-6 h-6 rounded-full" />
             <div>
@@ -26,9 +39,9 @@ const Card = ({ title, instructor, price, rating, image }) => {
           <span>★</span>
           <span>★</span>
           <span>★</span>
-          <span className="text-gray-400">{rating}</span>
+          <span className="text-gray-400">{course.rating}</span>
         </div>
-        <div className="text-green-600 font-semibold text-sm">{price}</div>
+        <div className="text-green-600 font-semibold text-sm">{course.price}</div>
       </div>
     </div>
   );
