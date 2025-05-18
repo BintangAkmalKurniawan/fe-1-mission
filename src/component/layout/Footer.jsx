@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-white text-gray-700 border-t">
-      <div className="max-w-7xl mx-auto px-6 py-10">
+    <footer className=" bottom-0 w-full bg-white text-gray-700 border-t">
+      <div className="max-w-7xl mx-auto px-6 py-5">
         {/* Atas - Logo & Deskripsi */}
         <div className="mb-6">
           <h2 className="text-xl font-bold">

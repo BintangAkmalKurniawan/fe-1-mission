@@ -8,6 +8,29 @@ export const courses = [
     rating: "3.5 (68)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "2",
@@ -17,6 +40,29 @@ export const courses = [
     rating: "4.2 (120)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "3",
@@ -26,6 +72,29 @@ export const courses = [
     rating: "4.0 (87)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "4",
@@ -35,6 +104,29 @@ export const courses = [
     rating: "4.3 (93)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "5",
@@ -44,6 +136,29 @@ export const courses = [
     rating: "4.4 (101)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "6",
@@ -53,6 +168,29 @@ export const courses = [
     rating: "4.1 (72)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "7",
@@ -62,6 +200,29 @@ export const courses = [
     rating: "4.0 (89)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "8",
@@ -71,6 +232,29 @@ export const courses = [
     rating: "3.9 (77)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "9",
@@ -80,6 +264,29 @@ export const courses = [
     rating: "4.2 (84)",
     image: "/thumbnail/satu.jpeg",
     category: "Pemasaran",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
 
   // === DESAIN ===
@@ -91,6 +298,29 @@ export const courses = [
     rating: "4.5 (134)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "11",
@@ -100,6 +330,29 @@ export const courses = [
     rating: "4.3 (102)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "12",
@@ -109,6 +362,29 @@ export const courses = [
     rating: "4.1 (88)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "13",
@@ -118,6 +394,29 @@ export const courses = [
     rating: "4.4 (93)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "14",
@@ -127,6 +426,29 @@ export const courses = [
     rating: "4.2 (77)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "15",
@@ -136,6 +458,29 @@ export const courses = [
     rating: "4.0 (81)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "16",
@@ -145,6 +490,29 @@ export const courses = [
     rating: "4.5 (97)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "17",
@@ -154,6 +522,29 @@ export const courses = [
     rating: "4.3 (88)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "18",
@@ -163,6 +554,29 @@ export const courses = [
     rating: "4.1 (79)",
     image: "/thumbnail/satu.jpeg",
     category: "Desain",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
 
   // === Pengembangan Diri ===
@@ -174,6 +588,29 @@ export const courses = [
     rating: "4.4 (103)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "20",
@@ -183,6 +620,29 @@ export const courses = [
     rating: "4.3 (100)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "21",
@@ -192,6 +652,29 @@ export const courses = [
     rating: "4.5 (120)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "22",
@@ -201,6 +684,29 @@ export const courses = [
     rating: "4.2 (89)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "23",
@@ -210,6 +716,29 @@ export const courses = [
     rating: "4.6 (130)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "24",
@@ -219,6 +748,29 @@ export const courses = [
     rating: "4.0 (75)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "25",
@@ -228,6 +780,29 @@ export const courses = [
     rating: "4.1 (91)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "26",
@@ -237,6 +812,29 @@ export const courses = [
     rating: "4.7 (140)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "27",
@@ -246,6 +844,29 @@ export const courses = [
     rating: "4.3 (99)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   // === Pengembangan Diri ===
   {
@@ -256,6 +877,29 @@ export const courses = [
     rating: "4.4 (103)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "29",
@@ -265,6 +909,29 @@ export const courses = [
     rating: "4.3 (100)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "30",
@@ -274,6 +941,29 @@ export const courses = [
     rating: "4.5 (120)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "31",
@@ -283,6 +973,29 @@ export const courses = [
     rating: "4.2 (89)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "32",
@@ -292,6 +1005,29 @@ export const courses = [
     rating: "4.6 (130)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "33",
@@ -301,6 +1037,29 @@ export const courses = [
     rating: "4.0 (75)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "34",
@@ -310,6 +1069,29 @@ export const courses = [
     rating: "4.1 (91)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "35",
@@ -319,6 +1101,29 @@ export const courses = [
     rating: "4.7 (140)",
     image: "/thumbnail/satu.jpeg",
     category: "Pengembangan Diri",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
   },
   {
     id: "36",
@@ -327,6 +1132,29 @@ export const courses = [
     price: "Rp 285K",
     rating: "4.3 (99)",
     image: "/thumbnail/sembilan.jpeg",
+    video: [
+      {
+        title: "Introduction to Course 1: Foundations of User Experience Design",
+        type: "Video",
+        duration: "12 Menit",
+        expanded: true,
+        items: [
+          { title: "The basics of user experience design", type: "Video", duration: "12 Menit" },
+          { title: "Jobs in the field of user experience", type: "Video", duration: "12 Menit" },
+          { title: "The product development life cycle", type: "Video", duration: "12 Menit" },
+        ],
+      },
+      {
+        title: "Jobs in the field of user experience",
+        type: "Video",
+        duration: "12 Menit",
+      },
+      {
+        title: "The product development life cycle",
+        type: "Video",
+        duration: "12 Menit",
+      },
+    ],
     category: "Bisni",
   },
 ];

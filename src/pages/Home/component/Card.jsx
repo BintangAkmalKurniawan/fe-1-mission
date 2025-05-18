@@ -12,7 +12,9 @@ const Card = ({ course }) => {
         price: course.price,
         rating: course.rating,
         image: course.image,
+        category: course.category,
         description: course.description,
+        video: course.video,
       },
     });
   };
