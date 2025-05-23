@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import { useState } from "react";
 
 const Card = ({ course }) => {
   const [name, role] = course.instructor.split("\n");
@@ -16,6 +17,9 @@ const Card = ({ course }) => {
       },
     });
   };
+
+  const [formatPrice, setFormatPrice] = useState("");
+
   return (
     <div className="flex flex-col md:flex-col bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer" onClick={handleClickCard}>
       <div className="flex flex-row md:flex-col gap-3">

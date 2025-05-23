@@ -18,3 +18,9 @@
 
 @media only screen and (max-width: 600px) {
 }
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
